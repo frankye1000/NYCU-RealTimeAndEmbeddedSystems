@@ -1,0 +1,1 @@
+cd SOFTWARE\uCOS-II\lab2\BC45\TEST

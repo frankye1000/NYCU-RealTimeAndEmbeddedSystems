@@ -1,0 +1,12 @@
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 15346224 bytes
+
+	COPY ..\SOURCE\TEST.LNK
+ TEST.LNK
+   1 File(s) copied.
+	C:\BC45\BIN\TLINK  @TEST.LNK
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Error: Undefined symbol _printCtxSwMessage in module test.c
+
+** error 1 ** deleting ..\test\test.exe

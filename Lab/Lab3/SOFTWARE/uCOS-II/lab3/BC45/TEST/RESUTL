@@ -1,0 +1,34 @@
+    0 complete 0   3
+    0 complete 3   4
+    0 complete 4   5
+---start OSPrioCur: 5 ,compTime: 2,time:0
+---end OSPrioCur: 5 ,compTime: 0,time:2
+---start OSPrioCur: 5 ,compTime: 7,time:2
+    2 lock R1   (Prio=5 changes to=1)
+    3 preempty 5   1
+    9 unlock R1   (Prio=1 changes to=5)
+---end OSPrioCur: 1 ,compTime: 0,time:9
+    9 complete 1   3
+---start OSPrioCur: 3 ,compTime: 2,time:9
+---end OSPrioCur: 3 ,compTime: 0,time:11
+---start OSPrioCur: 3 ,compTime: 2,time:11
+   11 lock R1   (Prio=3 changes to=1)
+   12 preempty 3   1
+---end OSPrioCur: 1 ,compTime: 0,time:13
+   13 lock R2   (Prio=1 changes to=1)
+---start OSPrioCur: 1 ,compTime: 2,time:13
+   15 unlock R1   (Prio=1 changes to=3)
+---end OSPrioCur: 1 ,compTime: 0,time:15
+   15 complete 1   4
+   15 complete 4   11
+   15 complete 11   12
+   19 preempty 12   4
+---start OSPrioCur: 4 ,compTime: 2,time:19
+---end OSPrioCur: 4 ,compTime: 0,time:21
+---start OSPrioCur: 4 ,compTime: 5,time:21
+   21 lock R2   (Prio=4 changes to=2)
+   22 preempty 4   2
+   26 unlock R2   (Prio=2 changes to=4)
+---end OSPrioCur: 2 ,compTime: 0,time:26
+   26 complete 2   12
+  200 preempty 12   0

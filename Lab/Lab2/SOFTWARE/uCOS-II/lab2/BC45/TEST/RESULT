@@ -1,0 +1,14 @@
+!!!over deadline time:1 task:1 exceed deadline 0
+ end task,start time 0,end time 1,to delay -1,prio:1,deadLine 0
+!!!over deadline time:1 task:2 exceed deadline 0
+ end task,start time 0,end time 1,to delay -1,prio:2,deadLine 0
+!!!over deadline time:1 task:3 exceed deadline 0
+ end task,start time 0,end time 1,to delay -1,prio:3,deadLine 0
+    1 complete 0   1
+    1 complete 1   0
+    1 complete 0   2
+    1 complete 2   0
+    1 complete 0   3
+    1 complete 3   0
+    0 complete 0   12
+  100 preempty 12   0

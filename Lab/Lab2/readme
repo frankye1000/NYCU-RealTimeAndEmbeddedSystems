@@ -1,0 +1,28 @@
+goToSource.bat :方便到達執行程式的dir
+
+kernel code:SOFTWARE\uCOS-II\SOURCE
+our code:SOFTWARE\uCOS-II\lab1\BC45\SOURCE
+makefile:SOFTWARE\uCOS-II\lab1\BC45\TEST
+
+compile & run:
+1.goToSource
+2.clean.bat
+3.maketest.bat
+4.test.exe
+
+*想要看compile的error
+打開maketest.bat，在22行的最後加上 > ../TEST/COMPILE.LOG
+
+* 修改的file
+test.C
+os_task.c 的ostaskcreate 把os_sched()註解調,因為我們現在的schedule 是根據自己在pcb裡面加的deadline,所以在taskcreate的時候deadline還沒有初始化,此時呼叫os_sched()會選錯對象
+os_core.c ,osintexit ,os_sched,osstart,getPrioHightRdy,ostimetick
+uCos.H 最下面的define,os_tcb
+printCtxSwMessage 故意放慢print速度
+
+
+* test.c 裡面的tickrate設小一點,遇到一對I/O時stdout才不會爛掉
+就算設成1u 也不要放太多Printf
+執行的時候exe 要按多次一點才會退出
+
+
